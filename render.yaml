@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: gws-reseller-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: SA_KEY_JSON
+        sync: false
+      - key: RESELLER_ADMIN
+        sync: false
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: PANEL_TOKEN
+        sync: false
